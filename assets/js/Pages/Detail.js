@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import {InertiaLink} from "@inertiajs/inertia-react";
 
 
 export default class Detail extends Component{
@@ -16,8 +17,13 @@ export default class Detail extends Component{
     render() {
     console.log(this.props)
         return (
-            <div> Hello Detail ! {this.props.prop}</div>
-        )
+            <Fragment>
+
+            <div> Hello Detail ! ID : {this.props.prop}</div>
+        <InertiaLink  className="btn btn-dark" href="/home">Retour sur Home</InertiaLink >
+            </Fragment>
+
+    )
     }
 }
 
